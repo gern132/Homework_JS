@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    text-align: center;
+}
+.center__item {
+    padding: 30px 0 30px 0;
+    border: 1px solid #000;
+}
+.item2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+}
+.hidden {
+    display: none;
+    box-sizing: border-box;
+}
