@@ -10,7 +10,9 @@ filterNumbersArr([-1, 0, 2, 34, -2]);
 
 
 function filterNumbersArr(numbers) {
-    return numbers.find(e => e > 0);
+    return numbers.find(function(e) {
+        return e > 0;
+    });
 }
 filterNumbersArr([6, -5, -4, -2, 1]);
 

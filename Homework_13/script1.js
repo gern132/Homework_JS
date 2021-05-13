@@ -2,34 +2,25 @@ var input = document.querySelector('.hidden'),
     block = document.querySelector('.item'),
     newRow = document.querySelector('.item2');
 
-function newInput(e, item, active){
-    if(e.addEventListener)
-        e.addEventListener(item, active);
-    else
-        e.attachEvent(item, active);
-}
+
 
 var mainBlock = document.getElementById('center');
 
-newInput(mainBlock, 'mouseup', function(e) {
+document.addEventListener('click', function newInput(e) {
     if(e.target.tagName.toLowerCase() == 'div')
     {   
         input.value = block.textContent;
         e.target.appendChild(input);
         input.classList.remove('hidden');
         input.focus();
-    }
+    } 
 });
 
-input.addEventListener('blur', function (e) {
-    // this.parentElement.textContent = this.value;
-    // this.classList.add('hidden');
-    // document.body.appendChild(this);
 
+input.addEventListener('blur', function (e) {
     e.target.parentElement.textContent = input.value;
     input.classList.add('hidden');
     document.body.appendChild(input);
-    console.log(e.target);
     });
 
     // newRow
@@ -47,6 +38,3 @@ input.addEventListener('blur', function (e) {
             input.classList.add('hidden');
             }
     });
-
-
-
