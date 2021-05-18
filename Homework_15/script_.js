@@ -25,20 +25,19 @@ var button = document.getElementById('button'),
     button.addEventListener('click', function (e) {
         var x = document.querySelector('.x').value,
             y = document.querySelector('.y').value;
+            mainBlock.innerHTML = '';
         function rrr(x,y) {
-            var result;
             for(var i = 0; i < y; i++) {
                 for(var j = 0; j < x; j++) {
                     if(i % 2 !== 0) {
-                        result += j % 2 === 0 ? white() : black()
+                        (j % 2 === 0) ? white() : black()
                     } else {
-                        result += j % 2 === 0 ? black() : white()
+                        (j % 2 === 0) ? black() : white()
                     }
                 }
             }
             var width = x * 72;
             mainBlock.style.width = width + 'px';
-            return result
         }
         rrr(+x, +y)
             });
