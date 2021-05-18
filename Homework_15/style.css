@@ -1,0 +1,36 @@
+.main__block {
+    display: flex;
+    margin: 15px  0 30px 15px;
+}
+h1 {
+    padding-right: 15px;
+    margin: 0;
+}
+button {
+    margin-left: 60px;
+    margin-bottom: 50px;
+    padding: 5px 10px;
+}
+.white {
+    width: 70px;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    border: 1px solid #000;
+}
+.whites {
+    width: 70px;
+    height: 70px;
+    background: rgb(255, 255, 255);
+}
+.black {
+    width: 70px;
+    height: 70px;
+    background: rgb(0, 0, 0);
+    border: 1px solid #000;
+}
+.chess {
+    display: flex;
+    flex-wrap: wrap;
+    width: 0px;
+    height: 144px;
+}
