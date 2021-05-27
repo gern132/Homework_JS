@@ -47,14 +47,12 @@ body {
     align-items: center;
     background: #1D252D;
     margin-right: 25px;
+    color: white;
 }
 .user:last-child {
     margin-right: 0;
 }
-.user p {
-    margin: 0;
-    color: white;
-}
+
 .switch__color {
     background: rgb(250, 237, 57);
 }

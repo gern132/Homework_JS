@@ -1,7 +1,6 @@
 var mainUsers = document.querySelector('.main__users'),
     mainText = document.querySelector('.main__block-text'),
     mainImg = document.querySelector('.main__mini-block');
-    // localStorage.clear();
 document.getElementById('button').addEventListener('click', function() {
 
     var arr;
@@ -23,7 +22,6 @@ document.getElementById('button').addEventListener('click', function() {
         request.send();
         request.onload = function() {
             var status = +String(request.status)[0];
-    
             if(status ===  2) {
                 document.querySelector('.main').classList.remove('hidden');
                 document.getElementById('button').setAttribute("disabled", "disabled"); 
@@ -44,7 +42,7 @@ document.getElementById('button').addEventListener('click', function() {
         for(var i = 0; i < e; i++) {
             var a = document.createElement('div');
             a.className = 'user';
-            a.innerHTML = '<p>User_' + (1 + i) + '</p>';
+            a.innerHTML = 'User_' + (1 + i);
             mainUsers.append(a);
         }
     }
@@ -66,8 +64,13 @@ document.getElementById('button').addEventListener('click', function() {
 function swit() {
     var block = document.querySelectorAll('.user');
     Array.from(block).forEach(function(i) {
-        i.addEventListener('click', function() {
+        i.addEventListener('click', function(e) {
             mainText.innerHTML = '';
+
+            for (var l = 0; l < block.length; l++) {
+                block[l].classList.remove('switch__color');
+            }
+            e.target.classList.add('switch__color');
 
             var img = document.createElement('img');
             img.src = arr[Array.from(block).indexOf(i)].avatar;
