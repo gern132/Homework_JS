@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game__time,
+.button {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    font-family: Syne Mono, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #1D252D;
+    background: #111922;
+}
+.button {
+    font-size: 18px;
+    padding: 5px;
+}
+.main__sec {
+    display: flex;
+}
+.hide {
+    display: none;
+}
