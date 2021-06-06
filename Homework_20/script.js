@@ -24,8 +24,8 @@ button[0].addEventListener('click', function() {
                 gTime[0].textContent = min > 9 ? min : '0' + min;
             } else if (min == 59) {
                 clearInterval(timer);
-                button[0].style.display = 'none';
-                button[2].style.display = 'none';
+                button[0].classList.add('hide');
+                button[2].classList.add('hide');
             };
             saveInfo();
         }, 10);
@@ -71,6 +71,8 @@ button[1].addEventListener('click', function() { //reset
     button[0].dataset.beggin = 'Start';
     button[0].innerHTML = button[0].dataset.beggin;
     showBlock.classList.add('hide');
+    button[0].classList.remove('hide');
+    button[2].classList.remove('hide');
     ms = sec = min = 0;
     Array.from(gTime).forEach(function(e) {
         e.innerHTML = '00';
