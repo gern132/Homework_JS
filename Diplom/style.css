@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main {
+    width: 1000px;
+    height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: red;
+    font-size: 18px;
+    font-family: Syne Mono, sans-serif;
+    position: relative;
+    /* overflow: hidden; */
+}
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    color: rgb(83, 98, 110);
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgb(30, 60, 141);
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: 65px;
+    margin: 0;
+    padding: 0;
+}
