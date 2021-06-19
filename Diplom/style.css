@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+*{
+    margin: 0 auto;
+}
 body {
     display: flex;
     justify-content: center;
@@ -7,33 +10,71 @@ body {
 }
 #main {
     width: 100%;
-    height: 300px;
+    /* height: 100vh; */
     border: 1px solid #000;
-    display: flex;
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: flex-end;
     align-items: center;
     color: red;
     font-size: 18px;
     font-family: Syne Mono, sans-serif;
     position: relative;
+    box-sizing: border-box;
     /* overflow: hidden; */
 }
 
 .main__text {
     display: none;
 }
-
+.button {
+    z-index: 3;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-family: Syne Mono, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgb(219, 187, 43);
+}
 .text {
     display: flex;
     justify-content: center;
     align-items: center;
     float: right;
-    color: rgb(83, 98, 110);
+    color: rgb(255, 255, 255);
     width: 60px;
     height: 60px;
-    border: 1px solid rgb(30, 60, 141);
+    border: 1px solid rgb(139, 118, 21);
+    border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
     position: absolute;
-    /* left: 30px; */
+    z-index: 2;
+}
+.mini__anime {
+    /* width: 96.65px;
+    height: 96.7px; */
+    width: calc(25.7px + 71 * (100vw / 1920));
+    height: calc(25.7px + 71 * (100vw / 1920));
+    background: #1D252D;
+    margin: 0px;
+    position: relative;
+}
+.text__block {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
 }
